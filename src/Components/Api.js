@@ -107,7 +107,6 @@ export const getComparison = (id) => {
 };
 
 export const deleteComparison = (id) => {
-  console.log(id);
   return new Promise((resolve, reject) => {
     fetchPostRequest(`/api/user/deleteComparison`, { id })
       .then((res) => res.json())

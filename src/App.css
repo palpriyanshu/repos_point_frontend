@@ -14,8 +14,6 @@ a {
   margin: 0 auto;
   margin-top: 5rem;
   margin-bottom: 5rem;
-
-
 }
 
 .btns {
@@ -26,7 +24,6 @@ a {
   margin: 0 auto;
   margin-top: 3rem;
 }
-
 
 .btn {
   border-radius: 5px;
@@ -48,13 +45,20 @@ a {
 .theme-btn:hover {
   border: 0.1rem solid blueviolet;
   background: blueviolet;
-  color: white
+  color: white;
+}
+
+.add-btn {
+  border: 0.1rem solid white;
+  background: white;
+  color: blueviolet;
+  font-size: 28px;
 }
 
 .danger-btn {
   border: 0.1rem solid #f5494a;
   background: #f5494a;
-  color: white
+  color: white;
 }
 
 .message {
@@ -72,8 +76,6 @@ a {
   right: -100%;
   transition: 0.5s right ease;
   border-radius: 10px;
-
-
 }
 
 .message.show {
@@ -81,9 +83,25 @@ a {
 }
 
 .success {
-  border: 2px solid rgb(27, 176, 27)
+  border: 2px solid rgb(27, 176, 27);
 }
 
 .failure {
   border: 2px solid rgb(229, 59, 59);
+}
+
+.hide {
+  display: none;
+}
+
+.form {
+  border: 1px solid black;
+  padding: 10vh;
+  position: fixed;
+  top: 20vh;
+  left: 50vh;
+  min-width: 70vh;
+  background-color: white;
+  z-index: 10;
+  display: block;
 }
