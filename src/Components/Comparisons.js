@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import * as Api from "./Api";
-import "./assets/css/profile.css";
-import withAuthorization from "./hoc/withAuthorization";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import * as Api from './Api';
+import './assets/css/profile.css';
+import withAuthorization from './hoc/withAuthorization';
 
 const ComparisonFolder = (props) => {
   const [comparison, setComparison] = useState({});
@@ -35,7 +35,7 @@ const Comparisons = (props) => {
   ));
   return (
     <div className="page">
-      <h2>My Comparisons</h2>
+      <h2>My Repositories</h2>
       <div className="comparisons">{comparisonComponent}</div>
     </div>
   );

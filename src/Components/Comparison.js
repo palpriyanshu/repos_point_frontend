@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Link, useHistory, useParams } from "react-router-dom";
-import * as Api from "./Api";
-import Cards from "./Cards";
-import withAuthorization from "./hoc/withAuthorization";
-import Modal from "./Modal";
-import alert from "../globals/alert";
-import ROUTES from "../globals/routes";
-import Button from "./Button";
+import React, { useEffect, useState } from 'react';
+import { Link, useHistory, useParams } from 'react-router-dom';
+import * as Api from './Api';
+import Cards from './Cards';
+import withAuthorization from './hoc/withAuthorization';
+import Modal from './Modal';
+import alert from '../globals/alert';
+import ROUTES from '../globals/routes';
+import Button from './Button';
 const Comparison = (props) => {
   const history = useHistory();
   const [comparison, setComparison] = useState({});
@@ -48,7 +48,7 @@ const Comparison = (props) => {
       </div>
       <div className="btns">
         <Link to={ROUTES.COMPARISONS}>
-          <Button classes="btn theme-btn">Go to Comparisons</Button>
+          <Button classes="btn theme-btn">Back</Button>
         </Link>
         <Button classes="danger-btn" onClick={showModal}>
           Delete

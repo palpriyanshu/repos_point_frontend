@@ -88,7 +88,10 @@ export const getOrderList = () => {
         }
         return res.json();
       })
-      .then(resolve);
+      .then((data) => {
+        console.log(data);
+        resolve(data);
+      });
   });
 };
 

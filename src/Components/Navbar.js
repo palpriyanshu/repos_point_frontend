@@ -27,7 +27,7 @@ const Navbar = function (props) {
         <div className="navlist">
           <div className="navItem">{props.user.name}</div>
           <div className="navItem">
-            <Link to={ROUTES.COMPARISONS}>Your comparisons</Link>
+            <Link to={ROUTES.COMPARISONS}>Your repositories</Link>
           </div>
           <button className="navItem btn danger-btn" onClick={handleLogout}>
             Logout
