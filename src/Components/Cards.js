@@ -15,14 +15,14 @@ const DeleteBtn = (props) => {
 
 export default (props) => {
   const [classes, dispatch] = useReducer(changeHover, {});
-  return props.cards.map((info) => {
+  return props.cards.map((info, index) => {
     return (
-      <div className="card" key={info.id}>
+      <div className="card" key={index}>
         {props.deleteCard && (
           <div>
             <DeleteBtn
               handleClick={() => {
-                props.deleteCard(info.id);
+                props.deleteCard(index);
               }}
             />
           </div>
@@ -30,7 +30,7 @@ export default (props) => {
         <div className="card-header">
           <div>
             <a href={info.html_url} target="_blank" rel="noopener noreferrer">
-              {info.full_name}
+              {info.username}
             </a>
           </div>
           <img src={info.avatar_url} />
@@ -46,39 +46,39 @@ export default (props) => {
           </div>
           {info.language || 'Not available'}
         </div>
-        {/* <div
+        <div
           className={`item ${classes.stars}`}
           onMouseEnter={() => dispatch({ type: CARD_ITEM.STARS })}
           onMouseLeave={() => dispatch({})}
         >
           <div className="label">
             <i className="fa fa-star" aria-hidden="true"></i>
-            Stars
+            tags
           </div>
-          {info.stargazers_count}
-        </div> */}
-        {/* <div
+          {info.tags[0]}
+        </div>
+        <div
           className={`item ${classes.forks}`}
           onMouseEnter={() => dispatch({ type: CARD_ITEM.LINK })}
           onMouseLeave={() => dispatch({})}
         >
           <div className="label">
             <i className="fa fa-code-fork" aria-hidden="true"></i>
-            Forks
+            description
           </div>
-          {info.forks}
-        </div> */}
-        {/* <div
+          {info.description}
+        </div>
+        <div
           className={`item ${classes.openIssue}`}
           onMouseEnter={() => dispatch({ type: CARD_ITEM.OPEN_ISSUES })}
           onMouseLeave={() => dispatch({})}
         >
           <div className="label">
             <i className="fa fa-exclamation-circle" aria-hidden="true"></i>
-            Open issues
+            repoLink
           </div>
-          {info.open_issues_count}
-        </div> */}
+          <a href={info.repoLink}>{info.repoLink}</a>
+        </div>
         <div
           className={`item ${classes.createdAt}`}
           onMouseEnter={() => dispatch({ type: CARD_ITEM.CREATED_AT })}
@@ -99,10 +99,10 @@ export default (props) => {
         >
           <div className="label">
             <i className="fa fa-wrench" aria-hidden="true"></i>
-            Last update
+            hosted at
           </div>
           <Moment fromNow interval={2000}>
-            {info.updated_at}
+            {info[`hosted at`]}
           </Moment>
         </div>
       </div>
