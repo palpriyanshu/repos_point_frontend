@@ -3,10 +3,10 @@
     "repoName": "library-backend",
     "username": "palpriyanshu",
     "tags": ["react_mini_project"],
-    "description": "user can borrow or return book",
+    "description": "can borrow or return book",
     "repoLink": "https://github.com/palpriyanshu/library-backend",
     "hosted at": "heroku",
-    "heroku-url": "https://priyanshu-library-react.heroku.com"
+    "heroku-url": "https://priyanshu-library-react.herokuapp.coms"
   },
   {
     "repoName": "Library-frontend",
@@ -22,7 +22,7 @@
     "description": "user can borrow or return book",
     "repoLink": "https://github.com/palpriyanshu/library-backend",
     "hosted at": "heroku",
-    "heroku-url": "https://priyanshu-library-react.heroku.com"
+    "heroku-url": "https://priyanshu-library-react.herokuapp.com"
   },
   {
     "repoName": "Library-frontend",

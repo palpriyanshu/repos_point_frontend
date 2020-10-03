@@ -1,5 +1,6 @@
 export default {
   LANGUAGE: 'LANGUAGE',
+  FORK: 'FORK',
   LINK: 'LINK',
   STARS: 'STARS',
   CREATED_AT: 'CREATED_AT',

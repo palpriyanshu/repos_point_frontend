@@ -9,6 +9,7 @@ import * as Api from './Components/Api';
 import Dashboard from './Components/DashBoard.js';
 import alert from './Components/util/alert';
 import ROUTES from './globals/routes';
+import LandingPage from './Components/LandingPage';
 
 const AlertMessage = (props) => {
   const { message, type } = props.alert || {};

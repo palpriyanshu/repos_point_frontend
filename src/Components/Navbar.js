@@ -3,9 +3,11 @@ import { Link, useHistory } from 'react-router-dom';
 import * as Api from './Api';
 import './assets/css/navbar.css';
 import ROUTES from '../globals/routes';
+import LandingPage from './LandingPage';
 
 const Navbar = function (props) {
   const history = useHistory();
+  const [isVisible, setIsVisible] = useState(false);
 
   const handleLogout = () => {
     Api.logout().then((isLoggedOut) => {
@@ -25,6 +27,18 @@ const Navbar = function (props) {
       </div>
       {login ? (
         <div className="navlist">
+          <div className="navItem" onClick={() => setIsVisible(!isVisible)}>
+            Add repo
+          </div>
+          <div>
+            {isVisible ? (
+              <LandingPage
+                setIsVisible={setIsVisible}
+                isVisible={isVisible}
+                dispatch={props.dispatch}
+              />
+            ) : null}
+          </div>
           <div className="navItem">{props.user.name}</div>
           <div className="navItem">
             <Link to={ROUTES.COMPARISONS}>Your repositories</Link>

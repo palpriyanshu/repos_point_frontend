@@ -1,5 +1,6 @@
-import React from "react";
-import "./assets/css/modal.css";
+import React from 'react';
+import './assets/css/modal.css';
+
 const Modal = (props) => {
   const btnClasses = props.btnClasses || {};
   return props.isVisible ? (
@@ -14,13 +15,13 @@ const Modal = (props) => {
         <div className="content">{props.children}</div>
         <div className="footer">
           <button
-            className={btnClasses.cancel || "btn theme-btn"}
+            className={btnClasses.cancel || 'btn theme-btn'}
             onClick={props.onCancel}
           >
             Cancel
           </button>
           <button
-            className={btnClasses.ok || "btn danger-btn"}
+            className={btnClasses.ok || 'btn danger-btn'}
             onClick={props.onConfirm}
           >
             OK

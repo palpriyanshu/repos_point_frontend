@@ -4,17 +4,17 @@ import styled from 'styled-components';
 
 const StyledNavBar = styled.div`
   margin: 20px;
-  background-color: #eee;
+  background: #8c2ce60d;
   height: 3.6vh;
 `;
 
 const StyledNavLink = styled(NavLink)`
-  color: #444;
+  color: #111;
   font-size: 20px;
   text-decoration: none;
   margin-right: 20px;
   &:hover {
-    color: #111;
+    color: #8c2ce6;
   }
 `;
 

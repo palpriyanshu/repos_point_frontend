@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Cards from './Cards.js';
 import styled from 'styled-components';
-import searchIcon from '../icons/searchBar.png';
+import searchIcon from './assets/images/searchBar.png';
 
 const SearchIcon = styled.img`
   width: 30px;
@@ -22,7 +22,7 @@ const SearchBar = styled.input`
 
 const SearchArea = styled.div`
   margin: 20px;
-  left: 50vw;
+  left: 30vw;
   top: 2.4vh;
   position: absolute;
   display: flex;
@@ -37,8 +37,8 @@ const SearchableGallery = (props) => {
   };
 
   const filteredGallery = (repoList) => {
-    return repoList.filter(({ repoName }) => {
-      return repoName.toLowerCase().includes(searchTerm.toLowerCase());
+    return repoList.filter(({ username }) => {
+      return username.toLowerCase().includes(searchTerm.toLowerCase());
     });
   };
   const filteredList = filteredGallery(props.data);

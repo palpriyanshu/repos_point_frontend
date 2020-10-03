@@ -53,13 +53,14 @@ export default (props) => {
         >
           <div className="label">
             <i className="fa fa-star" aria-hidden="true"></i>
-            tags
+            App Name
           </div>
-          {info.tags[0]}
+          {info.repoName || 'Not available'}
         </div>
+
         <div
           className={`item ${classes.forks}`}
-          onMouseEnter={() => dispatch({ type: CARD_ITEM.LINK })}
+          onMouseEnter={() => dispatch({ type: CARD_ITEM.FORKS })}
           onMouseLeave={() => dispatch({})}
         >
           <div className="label">
@@ -77,7 +78,7 @@ export default (props) => {
             <i className="fa fa-exclamation-circle" aria-hidden="true"></i>
             repoLink
           </div>
-          <a href={info.repoLink}>{info.repoLink}</a>
+          <a href={info.repoLink}>github repo link</a>
         </div>
         <div
           className={`item ${classes.createdAt}`}
@@ -101,9 +102,11 @@ export default (props) => {
             <i className="fa fa-wrench" aria-hidden="true"></i>
             hosted at
           </div>
-          <Moment fromNow interval={2000}>
-            {info[`hosted at`]}
-          </Moment>
+          {info[`hosted at`] ? (
+            <a href={info['heroku-url']}>{info[`hosted at`]}</a>
+          ) : (
+            <div>Not Available</div>
+          )}
         </div>
       </div>
     );
